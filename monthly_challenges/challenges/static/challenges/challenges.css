@@ -1,3 +1,5 @@
+/* challenges.css */
+
 /* Reset some default styles */
 body, h1, h2, h3, p, ul, li {
     margin: 0;
@@ -8,68 +10,71 @@ body, h1, h2, h3, p, ul, li {
 body {
     background-color: #f5f5f5;
     color: #333;
-    font-family: Arial, sans-serif;
-}
-
-/* Style the header */
-header {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-}
-
-/* Style the navigation menu */
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-/* Style the main content */
-main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Style the footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: #fff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    font-family: 'Your Custom Font', sans-serif;
 }
 
 /* Style the list of challenges in index.html */
 ul {
     list-style: none;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 20rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    padding: 1rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 30rem;
+    background: linear-gradient(to bottom, #eeeeee, #cccccc);
+    transition: box-shadow 0.3s ease;
 }
 
-ul li {
-    margin-bottom: 10px;
+/* Responsive design for smaller screens */
+@media only screen and (max-width: 600px) {
+    ul {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
-/* Add some spacing to the challenge text in monthly_challenge.html */
-h1 {
-    margin-bottom: 20px;
+/* Style each list item */
+li {
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+    transition: border-bottom 0.3s ease;
+}
+
+/* No border for the last item and the 6th item */
+li:last-of-type,
+li:nth-of-type(6) {
+    border-bottom: none;
+}
+
+/* Style links within list items */
+li a {
+    text-decoration: none;
+    color: #383838;
+    transition: color 0.3s ease;
+}
+
+/* Hover and active states for links */
+li a:hover,
+li a:active {
+    color: #7e0154;
+}
+
+/* Add subtle box shadow on hover for the entire list container */
+ul:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Additional styling for icons */
+.icon {
+    width: 20px; /* Adjust the size based on your icon dimensions */
+    height: 20px;
+    margin-right: 10px;
 }
